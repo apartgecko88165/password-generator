@@ -35,11 +35,12 @@ procedure makePassword(seed, name, choice) {
     for (i in seed) {
         i = i.toInt();
         for (j = 0; j < i; j++) {
-            passowrd += choice[i];
+            passoword += choice[i];
         }
     }
 }
 
+// finds the seed from a date
 procedure findSeed(date) {
     seed = "";
     for (i = 0; i < date.length; i++) {
