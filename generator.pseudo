@@ -10,7 +10,7 @@ procedure validSeed() {
 }
 
 // generate final password from seed
-procedure makePassword(seed, choice) {
+procedure makePassword(seed, name, choice) {
 
     // string of valid characters with all included
     allValid = "1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?";
@@ -21,13 +21,22 @@ procedure makePassword(seed, choice) {
     // string of all valid characters with numbers
     noSymbols = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 
-    if (choice == "all") {
+    if (choice == 0) {
         choice = allValid;
-    } elif 
+    } else if (choice == 1) {
+        choice = justLetters;
+    } else if (choice == 2) {
+        choice = noSymbols;
+    } else {
+        return;
+    }
 
+    password = "";
     for (i in seed) {
         i = i.toInt();
-        while ()
+        for (j = 0; j < i; j++) {
+            passowrd += choice[i];
+        }
     }
 }
 
