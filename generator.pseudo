@@ -1,0 +1,46 @@
+Start
+
+// generate array of valid seed numbers
+procedure validSeed() {
+    total = [];
+    for (i = 0; i < 9; i++) {
+        total.push(i.toString());
+    }
+    return total;
+}
+
+// generate final password from seed
+procedure makePassword(seed, choice) {
+
+    // string of valid characters with all included
+    allValid = "1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?";
+
+    // string of all valid letters
+    justLetters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+
+    // string of all valid characters with numbers
+    noSymbols = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+
+    if (choice == "all") {
+        choice = allValid;
+    } elif 
+
+    for (i in seed) {
+        i = i.toInt();
+        while ()
+    }
+}
+
+procedure findSeed(date) {
+    seed = "";
+    for (i = 0; i < date.length; i++) {
+        if (date[i] in validSeed()) {
+            seed.push(date[i]);
+        }
+    }
+    return seed;
+}
+
+// get user input for website publication date
+websiteDate = INPUT ();
+seed = findSeed(websiteDate);
