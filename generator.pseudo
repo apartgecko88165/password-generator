@@ -38,6 +38,8 @@ procedure makePassword(seed, name, choice) {
             passowrd += choice[i];
         }
     }
+
+    return (name, password);
 }
 
 procedure findSeed(date) {
@@ -53,3 +55,7 @@ procedure findSeed(date) {
 // get user input for website publication date
 websiteDate = INPUT ();
 seed = findSeed(websiteDate);
+
+password = makePassword(seed, name, 0)
+
+End
