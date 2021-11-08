@@ -15,31 +15,17 @@ procedure makePassword(seed, name, choice) {
     // string of valid characters with all included
     allValid = "1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?";
 
-    // string of all valid letters
-    justLetters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-
-    // string of all valid characters with numbers
-    noSymbols = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-
-    if (choice == 0) {
-        choice = allValid;
-    } else if (choice == 1) {
-        choice = justLetters;
-    } else if (choice == 2) {
-        choice = noSymbols;
-    } else {
-        return;
-    }
-
-    password = "";
+    sum = 0;
     for (i in seed) {
-        i = i.toInt();
-        for (j = 0; j < i; j++) {
-            passoword += choice[i];
-        }
+        sum += 1;
+    }
+    
+    password = "";
+    for (j in name) {
+        password += allValid(allValid.indexOf(j) + (sum % 2) * 2;
     }
 
-    return (name, password);
+    return password;
 }
 
 // finds the seed from a date
